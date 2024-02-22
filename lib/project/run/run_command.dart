@@ -34,7 +34,8 @@ class RunCommand extends Command {
 
     YamlHelper.validateGitsYaml(argGitsYaml);
 
-    'gits_cli l10n --gits-yaml "$argGitsYaml"'.run;
+    'gits_cli l10n --enable_deprecated_wait_for  --gits-yaml "$argGitsYaml"'
+        .run;
 
     final flavor = FlavorHelper.byFlavor(argFlavor, argGitsYaml);
 
